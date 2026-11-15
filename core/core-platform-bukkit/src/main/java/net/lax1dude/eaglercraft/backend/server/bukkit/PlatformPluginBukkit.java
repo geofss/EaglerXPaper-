@@ -825,7 +825,7 @@ implements IPlatform<Player> {
                     }
                     PlatformPluginBukkit.this.getLogger().warning("Player " + p.getUsername() + " was initialized, but never fired PlayerJoinEvent, dropping...");
                     PlatformPluginBukkit.this.dropPlayer(player);
-                }, 100L);
+                }, 600L);
                 IEaglerXServerJoinListener<Player> listener = PlatformPluginBukkit.this.serverJoinListener;
                 if (listener != null) {
                     listener.handlePreConnect(p);
