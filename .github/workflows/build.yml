@@ -24,3 +24,10 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build EaglerXPaper Bukkit plugin
         run: ./gradlew :core:shadowJarBukkit --no-daemon
+      - name: Upload Bukkit plugin JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: EaglerXPaper-test-build
+          path: core/build/libs/EaglerXPaper.jar
+          if-no-files-found: error
+          retention-days: 7
